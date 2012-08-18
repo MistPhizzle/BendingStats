@@ -1,0 +1,29 @@
+html {
+background-image:url('images/bg.gif');
+color: white
+font-family: "Georgia", "Lucida Grande", "Sans-Serif";
+}
+#minimalist {
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+font-size: 12px;
+border-collapse: collapse;
+margin: 30px 30px 30px 15px;
+}
+#minimalist th {
+font-weight: normal;
+font-size: 14px;
+color: #FFF;
+padding: 8px 2px;
+}
+#minimalist td {
+border-right: 30px solid transparent;
+border-left: 30px solid transparent; 
+color: #FFF;
+text-align:center;
+}
+.footer{
+    display:block;
+    position:fixed;
+    bottom:0px;
+    width:350px;
+  }
