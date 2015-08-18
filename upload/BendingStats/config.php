@@ -2,7 +2,7 @@
 $connect_error = 'Could not connect to the database!';
 
 // Server Name
-$servername = 'INSERT YOUR SERVER NAME';
+$servername = 'ProjectKorra';
 // Database Information
 $mysql_host = 'localhost';
 $mysql_user = 'root';

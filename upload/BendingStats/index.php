@@ -6,7 +6,7 @@
 
 <div class='footer'>
 <!-- Don't be a terrible person! Leave this here! -->
-<p><font style="color:white">Made by MistPhizzle</font></p>
+<p><font style="color:white">Made by <a href = 'http://projectkorra.com'>ProjectKorra</a></font></p>
 </div>
 <center>
 <?php
@@ -14,12 +14,12 @@ require ('config.php');
 $handle = mysql_connect($mysql_host, $mysql_user, $mysql_pass) or die($connect_error);
 mysql_select_db($mysql_db, $handle) or die ($connect_error);
 // Beginning variables / queries
-$waterbenders = mysql_query("SELECT COUNT(bending) FROM bending_element WHERE bending LIKE 'w'");
-$earthbenders = mysql_query("SELECT COUNT(bending) FROM bending_element WHERE bending LIKE 'e'");
-$firebenders = mysql_query("SELECT COUNT(bending) FROM bending_element WHERE bending LIKE 'f'");
-$airbenders = mysql_query("SELECT COUNT(bending) FROM bending_element WHERE bending LIKE 'a'");
-$chiblockers = mysql_query("SELECT COUNT(bending) FROM bending_element WHERE bending LIKE 'c'");
-$total = mysql_query("SELECT COUNT('player') FROM bending_element");
+$waterbenders = mysql_query("SELECT COUNT(element) FROM pk_players WHERE element LIKE '%w%'");
+$earthbenders = mysql_query("SELECT COUNT(element) FROM pk_players WHERE element LIKE '%e%'");
+$firebenders = mysql_query("SELECT COUNT(element) FROM pk_players WHERE element LIKE '%f%'");
+$airbenders = mysql_query("SELECT COUNT(element) FROM pk_players WHERE element LIKE '%a%'");
+$chiblockers = mysql_query("SELECT COUNT(element) FROM pk_players WHERE element LIKE '%c%'");
+$total = mysql_query("SELECT COUNT('player') FROM pk_players");
 // Arrays!
 $wb = mysql_fetch_array($waterbenders);
 $eb = mysql_fetch_array($earthbenders);
@@ -53,7 +53,6 @@ echo "<td><font size='6'><strong><center>$cb[0]</center></strong></font></td>";
 echo "</center></table>";
 echo "<br>";
 // Total
-echo "<center><font color='white' size='6'><strong>Total: $total2[0]</strong></font></center>";
 // Page Generation
 echo "<font style='color:white'>This page was generated on $today, at $now, to view an updated version of the page, refresh your browser.</font>";
 ?>
